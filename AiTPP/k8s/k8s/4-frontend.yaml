@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: aitpp-frontend:latest
-        imagePullPolicy: Never
+        image: saba0718/aitpp-frontend:aa268a5464dba77d977d506aa486670f406ed940
+        imagePullPolicy: Always
         ports:
         - containerPort: 5173
         resources:
