@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: backend
-        image: aitpp-backend:latest
-        imagePullPolicy: Never
+        image: saba0718/aitpp-backend:aa268a5464dba77d977d506aa486670f406ed940
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         envFrom:
@@ -58,8 +58,8 @@ spec:
     spec:
       containers:
       - name: worker
-        image: aitpp-worker:latest
-        imagePullPolicy: Never
+        image: saba0718/aitpp-worker:aa268a5464dba77d977d506aa486670f406ed940
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
             name: app-config
