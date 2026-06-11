@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: task-system
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: task-system
+data:
+  MONGO_URI: "mongodb://mongodb:27017/taskdb"
+  REDIS_HOST: "redis"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secrets
+  namespace: task-system
+type: Opaque
+data:
+  # Base64 encoded 'supersecretjwt'
+  JWT_SECRET: c3VwZXJzZWNyZXRqd3Q=
